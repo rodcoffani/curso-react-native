@@ -1,8 +1,13 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, SafeAreaView } from "react-native";
 
-const App = () => {
-    return <Text>Primeiro Componente</Text>
-}
+import PrimeiroComp from './components/Primeiro';
 
-export default App;
+/* SafeAreaView != View -> SafeAreaView faz com que os componentes 
+fiquem em uma "area segura" (por exemplo, fora do notch do iPhone) */
+
+export default () => (
+    <SafeAreaView>
+        <PrimeiroComp />
+    </SafeAreaView>
+)
