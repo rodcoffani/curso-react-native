@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet} from 'react-native';
 
+import MinMax from './components/MinMax';
 import CompPadrao, { Comp1, Comp2 } from './components/Multi';
 import PrimeiroComp from './components/Primeiro';
 
@@ -9,10 +10,12 @@ fiquem em uma "area segura" (por exemplo, fora do notch do iPhone) */
 
 export default () => (
     <SafeAreaView style={Style.App}>
-        <CompPadrao />
+        <MinMax min={3} max={20} />
+        <MinMax min={1} max={15} />
+        {/* <CompPadrao />
         <Comp1 />
-        <Comp2 />
-        <PrimeiroComp />
+        <Comp2 /> */}
+        {/* <PrimeiroComp /> */}
     </SafeAreaView>
 )
 
@@ -21,5 +24,6 @@ const Style = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        padding: 20,
     },
 })
