@@ -1,16 +1,17 @@
-import React from "react";
-import { Text } from "react-native";
+import React from 'react';
+import { Text } from 'react-native';
+import Estilo from './estilo'
 
 const Comp = () => {
-    return <Text>Comp Oficial</Text>
+    return <Text style={Estilo.fontG}>Comp Oficial</Text>
 }
 
 const Comp1 = () => {
-    return <Text>Comp #01</Text>
+    return <Text style={Estilo.fontG}>Comp #01</Text>
 }
 
 const Comp2 = () => {
-    return <Text>Comp #02</Text>
+    return <Text style={Estilo.fontG}>Comp #02</Text>
 }
 
 export { Comp1, Comp2 };

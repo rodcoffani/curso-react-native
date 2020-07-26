@@ -1,5 +1,5 @@
-import React from "react";
-import { SafeAreaView } from "react-native";
+import React from 'react';
+import { SafeAreaView, StyleSheet} from 'react-native';
 
 import CompPadrao, { Comp1, Comp2 } from './components/Multi';
 import PrimeiroComp from './components/Primeiro';
@@ -8,10 +8,18 @@ import PrimeiroComp from './components/Primeiro';
 fiquem em uma "area segura" (por exemplo, fora do notch do iPhone) */
 
 export default () => (
-    <SafeAreaView>
+    <SafeAreaView style={Style.App}>
         <CompPadrao />
         <Comp1 />
         <Comp2 />
         <PrimeiroComp />
     </SafeAreaView>
 )
+
+const Style = StyleSheet.create({
+    App: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+})
